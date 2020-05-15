@@ -1,0 +1,11 @@
+{
+	"css_peek.peekToExclude": [
+		"**/bower_components",
+		"**/node_modules"
+	],
+	"files.exclude": {
+		"**/.vscode": true,
+		"**/node_modules": true
+	},
+	"git.ignoreLimitWarning": true
+}
