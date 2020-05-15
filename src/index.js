@@ -1,3 +1,3 @@
 const css = require('./scss/style.scss')
 
-console.log('ziya yildirimckkkdasdasddasdasd')
+console.log('ziya dasdasda')
