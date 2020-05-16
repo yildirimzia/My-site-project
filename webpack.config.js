@@ -21,7 +21,15 @@ module.exports = {
 				use: ['css-loader', 'sass-loader'],
 				publicPath: '/dist'		
 			  })
-			}
+			},
+
+			{
+				test: /\.(png|jpe?g|gif)$/i,
+				loader: 'file-loader',
+				options: {
+				  name: '[path][name].[ext]',
+				},
+			},
 		]
 	},
 	
