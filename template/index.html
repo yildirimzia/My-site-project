@@ -14,6 +14,14 @@
 	<div class="box__content">
 		<div class="box__content-left-col">
 			
+
+			<div class="box__content-left-col-music">
+				<div id="music-id" class="music-box">
+					<button id="play">
+						<ion-icon name="musical-notes-outline"></ion-icon>
+					</button>
+				</div>
+			</div>
 		</div>
 		<div class="box__content-right-col">
 			<div class="box__content-right-col-info">
@@ -48,12 +56,30 @@
 			</div>
 		</div>
 		<div class="box__content-bottom-col">
-			<div class="box-content-bottom-col-info">
-				<h1>Front-end Developer</h1>
+			<div class="box__content-bottom-col-contact">
+				<form id="form" class="form" action="https://getform.io/f/d3c50f23-6399-4348-b36f-0dbc7401e195">
+
+					<div class="form-control">
+						<input type="text" attr="İsim" id="username" name="name" placeholder="İsim Ve Soyisim"/>
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<input type="text" attr="Email" id="email" placeholder="Email"/>
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<input type="tel" attr="Telefon Numarası" name="tel" id="tel" placeholder="Telefon Numarası"/>
+						<small>Error Message</small>
+					</div>
+					<div class="form-control">
+						<textarea type="text" id="message" placeholder="Lütfen Mesajınızı yazınız.." name="Message"></textarea>
+						<small>Error Message</small>
+					</div>		
+					<button class="btn">Gönder</button> 	
+				</form>					
 			</div>
 		</div>
 	</div>
-
 	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
 </body>

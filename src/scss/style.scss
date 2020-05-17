@@ -25,7 +25,37 @@ html {
 
   &-left-col {
     background-color: $leftBackground;
-    grid-area: leftCol;
+		grid-area: leftCol;
+		position: relative;
+		
+		&-music {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+
+			.music-not::after{
+				content: '';
+				width: 2px;
+				height: 27px;
+				display: block;
+				position: absolute;
+				left: 22px;
+				top: 2px;
+				transform: skew(-45deg);
+				background-color: $rightBackground;
+			}
+			
+
+
+			button {
+				background: transparent;
+				cursor: pointer;
+				ion-icon {
+					font-size: 30px;
+					color: $rightBackground;
+				}
+			}
+		}
 	}
 	
   &-right-col {
@@ -35,7 +65,7 @@ html {
     align-items: center;
 		
 		&-info {
-			margin-left: 10%;
+			margin-left: 12%;
 
 			h2 {
 				font-family: Poppins;
@@ -103,16 +133,89 @@ html {
 		background-size: cover;
 		background-position: center;
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
 
-		h1 {
-			font-family: Poppins;
-				text-transform: uppercase;
-				font-size: 2em;
-				letter-spacing: 3px;
-				color: $titleColor;
+		&-contact {
+			width: 400px;
+			padding: 20px;
+			.form-control {
+				display: flex;
+				flex-direction: column;
+				&.error {
+					small {
+						visibility: visible;
+					}
+					
+					input ,textarea{
+						border-color: red !important;
+					}
+				}
+
+				&.success {
+					input, textarea{
+						border-color: #2ecc71 !important;
+					}	
+				}
+				
+				small {
+					color: red;
+					margin-top: 5px;
+					text-indent: 2px;
+					font-size: 10px;
+					visibility: hidden;
+				}
+
+			}
+
+			.form {
+				input[type="text"],textarea, #tel{
+					border-bottom: 1px solid  $contentColor;
+					padding:10px;
+					background-color: transparent;
+					color: $contentColor;
+					
+					&::placeholder {
+						color: $contentColor;
+					}
+				}
+
+	
+				textarea {
+					height: 80px;
+					resize: none;
+				}
+
+
+
+				.btn {
+					border: none;
+					margin-top: 15px;
+					padding: 10px;
+					width: 100%;
+					background-color: $titleColor;
+					color: $contentColor;
+					text-transform: uppercase;
+					letter-spacing: 5px;
+					font-weight: bold;
+					border-radius: 25px;
+					cursor: pointer;
+				}
+			}
 		}
+
+
   }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px $contentColor inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
