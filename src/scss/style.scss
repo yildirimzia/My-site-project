@@ -32,6 +32,8 @@ html {
 			position: absolute;
 			bottom: 10px;
 			left: 10px;
+			display: flex;
+			align-items: center;
 
 			.music-not::after{
 				content: '';
@@ -43,6 +45,35 @@ html {
 				top: 2px;
 				transform: skew(-45deg);
 				background-color: $rightBackground;
+			}
+
+			.battery-box {
+				width: 28px;
+				height: 14px;	
+				border-radius: 5px;
+				border: 1px solid $contentColor;
+
+
+				&::after {
+					content: '';
+					width: 2px;
+					height: 6px;
+					background-color: $contentColor;
+					display: block;
+					position: absolute;
+					right: -3px;
+					top: 15px;
+				}
+
+				.battery-content {
+					height: 100%;
+					border-radius: 5px;
+
+					ion-icon {
+						color: #fff;
+						font-size: 12px;
+					}
+				}
 			}
 			
 
@@ -218,4 +249,3 @@ textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px $contentColor inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-
